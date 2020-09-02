@@ -12,7 +12,7 @@ from openapi_client.settings import host, access_token, userid, \
 class TestKSTradeApi(unittest.TestCase):
     ks_trade_api = TradingApi(host=host, access_token=access_token, userid=userid, \
                 consumer_key=consumer_key, app_id=app_id, ip="127.0.0.1", \
-                proxy_url="http://10.1.1.254:3128", proxy_user="nageshm", proxy_pass="augu_2020")
+                proxy_url="http://10.1.1.253:3128", proxy_user="", proxy_pass="")
 
     def test_00_session_login_api(self):
         login_response = self.ks_trade_api.session_login_user(password=password)
