@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KS- Trade API
+    KS Trade API's
 
 
 

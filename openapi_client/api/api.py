@@ -195,3 +195,26 @@ class KSTradeApi():
         margin_required = openapi_client.MarginApi(self.api_client).margin_required(self.consumer_key,self.session_token,
                 ReqMargin=req_margin)
         return margin_required
+
+    def get_ltp_quote(self, instrument_token):
+        quote = openapi_client.QuoteApi(self.api_client).get_ltp_quote(self.consumer_key, \
+                self.session_token, instrument_token)
+        return quote
+
+
+    def get_market_details_quote(self, instrument_token):
+        quote = openapi_client.QuoteApi(self.api_client).get_market_details_quote(self.consumer_key, \
+                self.session_token, instrument_token)
+        return quote
+
+
+    def get_ohlc_quote(self, instrument_token):
+        quote = openapi_client.QuoteApi(self.api_client).get_ohlc_quote(self.consumer_key, \
+                self.session_token, instrument_token)
+        return quote
+
+
+    def get_instruments_details(self, instrument_token):
+        quote = openapi_client.QuoteApi(self.api_client).get_instruments_details(self.consumer_key, \
+                self.session_token, instrument_token)
+        return quote

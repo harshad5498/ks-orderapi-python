@@ -3,7 +3,7 @@
 # flake8: noqa
 
 """
-    KS- Trade API
+    KS Trade API's
 
 
 
@@ -22,6 +22,7 @@ from openapi_client.api.margin_trading_api import MarginTradingApi
 from openapi_client.api.normal_order_api import NormalOrderApi
 from openapi_client.api.order_api import OrderApi
 from openapi_client.api.positions_api import PositionsApi
+from openapi_client.api.quote_api import QuoteApi
 from openapi_client.api.reports_api import ReportsApi
 from openapi_client.api.session_api import SessionApi
 from openapi_client.api.smart_order_routing_api import SmartOrderRoutingApi
@@ -40,11 +41,13 @@ from openapi_client.exceptions import ApiException
 from openapi_client.models.bracketcancel import Bracketcancel
 from openapi_client.models.bracketmodify import Bracketmodify
 from openapi_client.models.bracketplace import Bracketplace
+from openapi_client.models.buy import Buy
 from openapi_client.models.codcancel import Codcancel
 from openapi_client.models.codmodify import Codmodify
 from openapi_client.models.codplace import Codplace
 from openapi_client.models.ctdmodify import Ctdmodify
 from openapi_client.models.ctdplace import Ctdplace
+from openapi_client.models.depth import Depth
 from openapi_client.models.existing_mtf_order import ExistingMTFOrder
 from openapi_client.models.existing_normal_order import ExistingNormalOrder
 from openapi_client.models.existing_order import ExistingOrder
@@ -55,12 +58,16 @@ from openapi_client.models.gtccancel import Gtccancel
 from openapi_client.models.gtcmodify import Gtcmodify
 from openapi_client.models.gtcplace import Gtcplace
 from openapi_client.models.history import History
+from openapi_client.models.instrument import Instrument
+from openapi_client.models.ltp_quote import LTPQuote
 from openapi_client.models.margin_det import MarginDet
+from openapi_client.models.market_details_quote import MarketDetailsQuote
 from openapi_client.models.new_mtf_order import NewMTFOrder
 from openapi_client.models.new_normal_order import NewNormalOrder
 from openapi_client.models.new_order import NewOrder
 from openapi_client.models.new_sm_order import NewSMOrder
 from openapi_client.models.new_sor_order import NewSOROrder
+from openapi_client.models.ohlc_quote import OHLCQuote
 from openapi_client.models.open import Open
 from openapi_client.models.order_info import OrderInfo
 from openapi_client.models.orders import Orders
@@ -88,6 +95,7 @@ from openapi_client.models.res_session_init import ResSessionInit
 from openapi_client.models.res_session_init_encryption import ResSessionInitEncryption
 from openapi_client.models.res_session_init_redirect import ResSessionInitRedirect
 from openapi_client.models.res_session_init_weblink import ResSessionInitWeblink
+from openapi_client.models.sell import Sell
 from openapi_client.models.sor import Sor
 from openapi_client.models.stocks import Stocks
 from openapi_client.models.todays import Todays
