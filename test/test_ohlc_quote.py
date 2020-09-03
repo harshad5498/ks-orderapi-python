@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import openapi_client
-from openapi_client.models.new_mtf_order import NewMTFOrder  # noqa: E501
+from openapi_client.models.ohlc_quote import OHLCQuote  # noqa: E501
 from openapi_client.rest import ApiException
 
-class TestNewMTFOrder(unittest.TestCase):
-    """NewMTFOrder unit test stubs"""
+class TestOHLCQuote(unittest.TestCase):
+    """OHLCQuote unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,29 +29,26 @@ class TestNewMTFOrder(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test NewMTFOrder
+        """Test OHLCQuote
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.new_mtf_order.NewMTFOrder()  # noqa: E501
+        # model = openapi_client.models.ohlc_quote.OHLCQuote()  # noqa: E501
         if include_optional :
-            return NewMTFOrder(
+            return OHLCQuote(
+                instrumentName = '0', 
                 instrumentToken = 56, 
-                transactionType = 'BUY', 
-                quantity = 56, 
-                price = 1.337, 
-                validity = 'GFD', 
-                variety = 'REGULAR', 
-                disclosedQuantity = 56, 
-                triggerPrice = 1.337, 
-                tag = '0'
+                open = 1.337, 
+                high = 1.337, 
+                low = 1.337, 
+                close = 1.337
             )
         else :
-            return NewMTFOrder(
+            return OHLCQuote(
         )
 
-    def testNewMTFOrder(self):
-        """Test NewMTFOrder"""
+    def testOHLCQuote(self):
+        """Test OHLCQuote"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

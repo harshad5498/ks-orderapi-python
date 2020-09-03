@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import openapi_client
-from openapi_client.models.new_mtf_order import NewMTFOrder  # noqa: E501
+from openapi_client.models.depth import Depth  # noqa: E501
 from openapi_client.rest import ApiException
 
-class TestNewMTFOrder(unittest.TestCase):
-    """NewMTFOrder unit test stubs"""
+class TestDepth(unittest.TestCase):
+    """Depth unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,29 +29,32 @@ class TestNewMTFOrder(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test NewMTFOrder
+        """Test Depth
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.new_mtf_order.NewMTFOrder()  # noqa: E501
+        # model = openapi_client.models.depth.Depth()  # noqa: E501
         if include_optional :
-            return NewMTFOrder(
-                instrumentToken = 56, 
-                transactionType = 'BUY', 
-                quantity = 56, 
-                price = 1.337, 
-                validity = 'GFD', 
-                variety = 'REGULAR', 
-                disclosedQuantity = 56, 
-                triggerPrice = 1.337, 
-                tag = '0'
+            return Depth(
+                buy = [
+                    openapi_client.models.depth_buy.DepthBuy(
+                        price = 1.337, 
+                        quantity = 56, 
+                        orders = 56, )
+                    ], 
+                sell = [
+                    openapi_client.models.depth_sell.DepthSell(
+                        price = 1.337, 
+                        quantity = 56, 
+                        orders = 56, )
+                    ]
             )
         else :
-            return NewMTFOrder(
+            return Depth(
         )
 
-    def testNewMTFOrder(self):
-        """Test NewMTFOrder"""
+    def testDepth(self):
+        """Test Depth"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 
