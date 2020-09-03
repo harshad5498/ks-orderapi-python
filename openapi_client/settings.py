@@ -1,8 +1,8 @@
-host = "https://sbx.kotaksecurities.com/apim"
+host = ""
 access_token = ""
 userid = "";
 consumer_key = "";
 ip = "172.24.2.119";
 app_id = "";
-password = "@1"
+password = ""
 access_code = ""
