@@ -1,6 +1,7 @@
 import unittest
 import time
 
+
 from openapi_client.api.api import KSTradeApi as TradingApi
 from openapi_client.rest import ApiValueError
 
